@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects,Popovski</title>
+
+        <!-- Link to the external CSS file -->
+        <link rel="stylesheet" href="projects.css">
+        <script src="projects.js" defer></script>
+
+    </head>
+
+    <body>
+        <div class="hamburger" onclick="toggleSidebar()">☰</div>
+        <div id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">×</button>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+
+            <!-- Display User Info (Location, Time, IP) -->
+            <div id="user-info">
+                <p id="ip-address"></p>
+                <p id="location"></p>
+                <p id="current-time"></p>
+            </div>
+
+            <!-- GIF at the Bottom -->
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/wMcFYStkhc6mA/giphy.gif" alt="GIF">
+            </div>
+        </div>
+
+
+        <h1>>>Directory: <div id="typed-text"></div></h1>
+
+
+    </body>
+
+
+
+
+</html>

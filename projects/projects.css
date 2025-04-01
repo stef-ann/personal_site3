@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Workbench&display=swap');
+
+h1 {
+    font-family: 'Consolas', monospace;
+    font-size: 15px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+body {
+    background-image: url('https://media.giphy.com/media/TxVVB6PfWMjE4/giphy.gif'); /* GIF URL */
+    background-size: auto; /* Keep original size */
+    background-position: top left;
+    background-repeat: repeat;
+    margin: 0;
+    font-family: 'Consolas', monospace;
+    color: #00FF00;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #0004ff;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 999;
+    font-family: 'Workbench', monospace;
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+/* Sidebar Links */
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1; /* Allows links to take up space while pushing GIF down */
+}
+
+#sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: #ff5900;
+    display: block;
+    font-size: 25px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+}
+
+/* GIF Container at Bottom */
+.gif-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 450px;
+}
+
+.gif-container img {
+    width: 100%;
+    max-width: 150px;
+}
+
+/* User Info Section */
+#user-info {
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    font-size: 19px;
+    color: #ff5900;
+    text-align: left;
+}
+
+#user-info p {
+    margin: 5px 0;
+}
+
+/* Typing Effect Styles */
+#typed-text {
+    display: inline;
+    white-space: nowrap;
+}
+
+#details {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Consolas', monospace;
+}
