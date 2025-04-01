@@ -95,3 +95,50 @@ function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle('active');
 }
+
+
+
+// Animation sequence for the window
+setTimeout(() => {
+    // First, show the horizontal line
+    const horizontalLine = document.getElementById('horizontalLine');
+    horizontalLine.style.display = 'block';
+
+    // After a short delay, show the window with title bar only
+    setTimeout(() => {
+        const explorer = document.getElementById('xpWindow');
+        explorer.style.display = 'flex';
+        explorer.style.height = '27px'; // Just the title bar height
+
+        // Then animate to full height
+        setTimeout(() => {
+            explorer.style.height = '400px';
+            // Hide the horizontal line once animation is done
+            setTimeout(() => {
+                horizontalLine.style.display = 'none';
+            }, 500);
+        }, 300);
+    }, 300);
+}, 1000);
+
+function closeWindow() {
+    const explorer = document.getElementById('xpWindow');
+    explorer.style.height = '0';
+    setTimeout(() => {
+        explorer.style.display = 'none';
+    }, 500);
+}
+
+function maximizeWindow() {
+    let explorer = document.getElementById('xpWindow');
+    if (explorer.style.width === '100vw' && explorer.style.height === '100vh') {
+        explorer.style.width = '600px';
+        explorer.style.height = '400px';
+    } else {
+        explorer.style.width = '100vw';
+        explorer.style.height = '100vh';
+    }
+}
+
+// Start typing animation after window appears
+setTimeout(typeText, 2000);

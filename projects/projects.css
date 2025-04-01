@@ -15,7 +15,7 @@ body {
     background-repeat: repeat;
     margin: 0;
     font-family: 'Consolas', monospace;
-    color: #00FF00;
+    color: #000000;
 }
 
 /* Hamburger Icon */
@@ -123,4 +123,118 @@ body {
     font-size: 15px;
     line-height: 1.5;
     font-family: 'Consolas', monospace;
+}
+
+body {
+    font-family: 'Tahoma', sans-serif;
+}
+
+.explorer {
+    width: 600px;
+    height: 0;
+    background: white;
+    border: 2px solid #888;
+    border-radius: 3px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.title-bar {
+    background: linear-gradient(to right, #0058b5, #2684de);
+    color: white;
+    padding: 5px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    height: 25px;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.button {
+    width: 18px;
+    height: 18px;
+    background: #d5eaff;
+    border: 1px solid #0050a0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #0050a0;
+}
+
+.button.close {
+    background: #ff5050;
+    color: white;
+    border-color: #cc0000;
+}
+
+.content {
+    display: flex;
+    height: calc(100% - 25px);
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 10px 15px;
+    background-color: white;
+    overflow: auto;
+}
+
+.file-icon {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px 15px 15px 0;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    width: 70px;
+    vertical-align: top;
+}
+
+.file-icon img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+.file-icon:hover {
+    background-color: #e8f0f8;
+}
+
+.horizontal-line {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 2px;
+    background: #0058b5;
+    display: none;
+}
+
+/* Keep your original sidebar styling */
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
 }

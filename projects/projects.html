@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projects,Popovski</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects, Popovski</title>
+    <link rel="stylesheet" href="projects.css">
+    <script src="projects.js" defer></script>
 
-        <!-- Link to the external CSS file -->
-        <link rel="stylesheet" href="projects.css">
-        <script src="projects.js" defer></script>
+</head>
 
-    </head>
+<body>
+<div class="hamburger" onclick="toggleSidebar()">☰</div>
+<div id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
+    <div id="user-info">
+        <p id="ip-address"></p>
+        <p id="location"></p>
+        <p id="current-time"></p>
+    </div>
+    <div class="gif-container">
+        <img src="https://media.giphy.com/media/wMcFYStkhc6mA/giphy.gif" alt="GIF">
+    </div>
+</div>
+<h1>>>Directory: <div id="typed-text"></div></h1>
 
-    <body>
-        <div class="hamburger" onclick="toggleSidebar()">☰</div>
-        <div id="sidebar">
-            <button class="close-btn" onclick="toggleSidebar()">×</button>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
+<!-- Added horizontal line for animation -->
+<div class="horizontal-line" id="horizontalLine"></div>
 
-            <!-- Display User Info (Location, Time, IP) -->
-            <div id="user-info">
-                <p id="ip-address"></p>
-                <p id="location"></p>
-                <p id="current-time"></p>
-            </div>
-
-            <!-- GIF at the Bottom -->
-            <div class="gif-container">
-                <img src="https://media.giphy.com/media/wMcFYStkhc6mA/giphy.gif" alt="GIF">
-            </div>
+<div class="explorer" id="xpWindow">
+    <div class="title-bar">
+        My Documents
+        <div class="buttons">
+            <div class="button" onclick="maximizeWindow()">🗖</div>
+            <div class="button" onclick="closeWindow()">❌</div>
         </div>
+    </div>
+    <div class="content">
+        <div class="sidebar">
+            <h3>Project Files</h3>
+            <ul>
+                <li>📁 Make a new folder</li>
+                <li>🌐 Publish this folder</li>
+                <li>📤 Share this folder</li>
+            </ul>
+            <h3>Personal Projects</h3>
+            <ul>
+                <li>💻 Desktop</li>
+                <li>📂 Shared Documents</li>
+                <li>🖥 My Computer</li>
+                <li>🔗 My Network Places</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="file-icon"><img src="folder.png" alt="folder"> My Music</div>
+            <div class="file-icon"><img src="folder.png" alt="folder"> My Pictures</div>
+            <div class="file-icon"><img src="folder.png" alt="folder"> My Videos</div>
+            <div class="file-icon"><img src="textfile.png" alt="file"> new document</div>
+            <div class="file-icon"><img src="textfile.png" alt="file"> test</div>
+        </div>
+    </div>
+</div>
+<script>
 
-
-        <h1>>>Directory: <div id="typed-text"></div></h1>
-
-
-    </body>
-
-
-
+</script>
+</body>
 
 </html>
